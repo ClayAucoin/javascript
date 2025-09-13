@@ -32,7 +32,7 @@ function listMovies_forEach() {
     MOVIES.forEach(movie => {
         const li = document.createElement("li");
         li.textContent = `${movie.name} (${movie.year})`;
-        $("movieListforEach").appendChild(li);
+        $("movieList-forEach").appendChild(li);
     });
 }
 listMovies_forEach();
@@ -45,6 +45,28 @@ function listMovies_map() {
     const createHTML = MOVIES.map(movie => `<li>${movie.name} (${movie.year})</li>`).join("");
 
     // Inject into the <ul>
-    $("movieListmap").innerHTML = createHTML;
+    $("movieList-map").innerHTML = createHTML;
 }
 listMovies_map();
+
+
+/*
+* list clickable movies in li using map()
+*/
+function listMovies_click() {
+    // Render list with a data attribute
+    const html = MOVIES.map(movie =>
+        `<li data-name="${movie.name}" data-year="${movie.year}">${movie.name} (${movie.year})</li>`
+    ).join("");
+
+    const movieList = $("movieList-click");
+    movieList.innerHTML = html;
+
+    // Event delegation: listen for clicks on <ul>
+    movieList.addEventListener("click", (e) => {
+        if (e.target.tagName === "LI") {
+            console.log(`You clicked: ${e.target.dataset.name} (${e.target.dataset.year})`);
+        }
+    });
+}
+listMovies_click();
