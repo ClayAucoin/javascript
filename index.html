@@ -16,36 +16,50 @@
 <body>
 
     <div class="container m-2">
-        <div class="card" style="width: 23rem;">
+        <div class="card" style="width: 30rem;">
             <div class="card-body text-center">
                 <h3 class="card-title">Display properties of an ARRAY of an OBJECT</h3>
-                <h4 class="card-text"><span id="movieDisplay" style="font-weight: bold;"></span></h4>
+                <h6 class="card-subtitle">choose movie number to show</h6>
+                <h4 class="card-text m-2"><span id="movieDisplay" style="font-weight: bold;"></span></h4>
             </div>
         </div>
-    </div>
 
-    <div class="container m-2">
-        <div class="card" style="width: 23rem;">
+        <div class="card" style="width: 30rem;">
             <div class="card-body">
-                <h3 class="card-title text-center">Display List</h3>
+                <div class="text-center">
+                    <h3 class="card-title">Display List</h3>
+                    <h6 class="card-subtitle">list movies in li</h6>
+                </div>
                 <h4 class="card-text"><span id="movieListSpan" style="font-weight: bold;"></span></h4>
-                <ul id="movieList"></ul>
+                <ul id="movieListforEach"></ul>
             </div>
         </div>
-    </div>
 
-
-    <!-- <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card" style="width: 30rem;">
+            <div class="card-body">
+                <div class="text-center">
+                    <h3 class="card-title">Display List</h3>
+                    <h6 class="card-subtitle">list movies using map()</h6>
+                </div>
+                <h4 class="card-text"><span id="movieListSpan" style="font-weight: bold;"></span></h4>
+                <ul id="movieListmap"></ul>
+            </div>
         </div>
-    </div> -->
 
-    <script src='js/script.js'></script>
+        <div class="card" style="width: 30rem;">
+            <div class="card-body">
+                <div class="text-center">
+                    <h3 class="card-title">Display List</h3>
+                    <h6 class="card-subtitle">clickable list of movies using map()</h6>
+                </div>
+                <h4 class="card-text"><span id="movieListSpan" style="font-weight: bold;"></span></h4>
+                <ul id="movieListmap"></ul>
+            </div>
+        </div>
+
+
+
+        <script src='js/script.js'></script>
 
 </body>
 
